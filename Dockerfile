@@ -1,5 +1,8 @@
 FROM ubuntu:17.04
 
+ENV MATTERMOST_ENABLE_SSL=false \
+    PLATFORM_PORT_80_TCP_PORT=80
+
 RUN apt-get update && apt-get install -y nginx
 
 RUN rm /etc/nginx/sites-enabled/default
